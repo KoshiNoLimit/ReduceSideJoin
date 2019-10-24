@@ -10,19 +10,19 @@ public class AirWC implements WritableComparable {
 
     @Override
     public int compareTo(Object o) {
+        if()
         return 0;
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
-
+        dataOutput.writeInt(id);
+        dataOutput.writeInt(ind);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        id = dataInput.id;
-        
-
+        id = dataInput.readInt();
+        ind = dataInput.readInt();
     }
 }
