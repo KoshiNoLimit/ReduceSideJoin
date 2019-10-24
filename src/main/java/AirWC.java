@@ -4,13 +4,13 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirWC implements WritableComparable {
+public class AirWC implements WritableComparable<AirWC> {
     private int id;
     private int ind;
 
     @Override
     public int compareTo(Object o) {
-        if()
+        if(id < o.id)
         return 0;
     }
 
