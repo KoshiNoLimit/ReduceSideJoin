@@ -7,7 +7,7 @@ import java.io.IOException;
 public class AirWC implements WritableComparable {
 
     @Override
-    public int compareTo(AirWC o) {
+    public int compareTo(Object o) {
         return 0;
     }
 
@@ -19,10 +19,5 @@ public class AirWC implements WritableComparable {
     @Override
     public void readFields(DataInput dataInput) throws IOException {
 
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }
