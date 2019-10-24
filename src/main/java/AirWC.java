@@ -5,6 +5,8 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AirWC implements WritableComparable {
+    private int id;
+    private int ind;
 
     @Override
     public int compareTo(Object o) {
@@ -13,6 +15,7 @@ public class AirWC implements WritableComparable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
+        
 
     }
 
