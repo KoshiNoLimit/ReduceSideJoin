@@ -5,6 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AirWC implements WritableComparable {
+
     @Override
     public int compareTo(Object o) {
         return 0;
