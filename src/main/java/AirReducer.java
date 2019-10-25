@@ -1,4 +1,3 @@
-import org.apache.commons.math3.analysis.function.Max;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
