@@ -25,8 +25,8 @@ public class AirWC implements WritableComparable<AirWC> {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeInt(id);
-        dataOutput.writeInt(ind);
+        dataOutput.writeInt(this.id);
+        dataOutput.writeInt(this.ind);
     }
 
     @Override
