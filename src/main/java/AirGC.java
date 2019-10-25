@@ -3,7 +3,7 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class AirGC extends WritableComparator {
     @Override
-    public int compare(AirWC a, AirWC b) {
+    public int compare(WritableComparable a, WritableComparable b) {
         return a.getId() - b.getId();
     }
 }
