@@ -11,18 +11,20 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
         Iterator<Text> set = values.iterator();
 
         String name = set.next().toString();
-        int size = 0;
-        double min = 0.0, med = 0.0, max=0.0;
-        for(; set.hasNext(); size++) {
-            double x = Double.parseDouble(set.next().toString());
-            if(x < min) {
-                min = x;
-            } else if(x > max) {
-                max = x;
+        if(set.hasNext()) {
+            int size = 0;
+            double min = 0.0, med = 0.0, max = 0.0;
+            for (; set.hasNext(); size++) {
+                double x = Double.parseDouble(set.next().toString());
+                if (x < min) {
+                    min = x;
+                } else if (x > max) {
+                    max = x;
+                }
+                med += x;
             }
-            med += x;
-
-
+            context.write(new Text(name), Text())
         }
+
     }
 }
