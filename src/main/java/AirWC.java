@@ -31,7 +31,7 @@ public class AirWC implements WritableComparable<AirWC> {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        id = dataInput.readInt();
-        ind = dataInput.readInt();
+        this.id = dataInput.readInt();
+        this.ind = dataInput.readInt();
     }
 }
