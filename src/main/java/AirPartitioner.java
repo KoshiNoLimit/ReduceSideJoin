@@ -6,6 +6,6 @@ public class AirPartitioner extends HashPartitioner<AirWC, Text> {
 
     @Override
     public int getPartition(AirWC key, Text value, int numReduceTasks) {
-        return key.getId() % numReduceTasks;
+        return (key.getId()) % numReduceTasks;
     }
 }
