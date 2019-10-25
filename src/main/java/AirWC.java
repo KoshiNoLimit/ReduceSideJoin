@@ -14,13 +14,13 @@ public class AirWC implements WritableComparable<AirWC> {
     }
 
     int getId() {
-        return id;
+        return this.id;
     }
 
     @Override
     public int compareTo(AirWC o) {
-        if(id == o.id) return(ind < o.ind ? -1 : 1);
-        else return (id < o.id ? -1 : 1);
+        if(this.id == o.id) return(this.ind < o.ind ? -1 : 1);
+        else return (this.id < o.id ? -1 : 1);
     }
 
     @Override
