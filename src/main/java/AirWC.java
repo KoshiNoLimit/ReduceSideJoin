@@ -8,7 +8,7 @@ public class AirWC implements WritableComparable<AirWC> {
     private Integer id;
     private Integer ind;
 
-    public AirWC() {
+    protected AirWC() {
         this.id = 0;
         this.ind = 0;
     }
