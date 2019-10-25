@@ -23,20 +23,23 @@ public class AirWC implements WritableComparable<AirWC> {
     }
 
     @Override
-    public int compare(AirWC o) {
-        if(this.id == o.id) return(this.ind < o.ind ? -1 : 1);
-        else return (this.id < o.id ? -1 : 1);
+    public int compareTo(AirWC o) {
+        if(this.id.equals(o.id)){
+            if(this.ind.equals(o.ind)) return 0;
+            return(this.ind < o.ind ? -1 : 1);
+        }
+        return (this.id < o.id ? -1 : 1);
     }
 
-//    @Override
-//    public void write(DataOutput dataOutput) throws IOException {
-//        dataOutput.writeInt(this.id);
-//        dataOutput.writeInt(this.ind);
-//    }
-//
-//    @Override
-//    public void readFields(DataInput dataInput) throws IOException {
-//        this.id = dataInput.readInt();
-//        this.ind = dataInput.readInt();
-//    }
+    @Override
+    public void write(DataOutput dataOutput) throws IOException {
+        dataOutput.writeInt(this.id);
+        dataOutput.writeInt(this.ind);
+    }
+
+    @Override
+    public void readFields(DataInput dataInput) throws IOException {
+        this.id = dataInput.readInt();
+        this.ind = dataInput.readInt();
+    }
 }
