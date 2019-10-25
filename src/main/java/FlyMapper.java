@@ -20,6 +20,6 @@ public class FlyMapper extends Mapper <LongWritable, Text, AirWC, Text> {
         for (int i = 0; i < set.length; i++) {
             set[i] = set[i].replaceAll("\"", "");
         }
-        context.write(new AirWC(Integer.parseInt(set[ID]), 0), new Text(set[DELAY]));
+        context.write(new AirWC(Integer.parseInt(set[ID]), 1), new Text(set[DELAY]));
     }
 }
