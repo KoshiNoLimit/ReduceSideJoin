@@ -8,11 +8,6 @@ public class AirWC implements WritableComparable<AirWC> {
     private Integer id;
     private Integer ind;
 
-    protected AirWC() {
-        this.id = 0;
-        this.ind = 0;
-    }
-
     AirWC(Integer id, Integer ind) {
         this.id = id;
         this.ind = ind;
