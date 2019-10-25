@@ -1,3 +1,4 @@
+import org.apache.commons.math3.analysis.function.Max;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
@@ -13,7 +14,7 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
         String name = set.next().toString();
         if(set.hasNext()) {
             double size = 0.0;
-            double min = 0.0, med = 0.0, max = 0.0;
+            double min = 0.0, med = 0.0, max = ;
             for (; set.hasNext(); size++) {
                 double x = Double.parseDouble(set.next().toString());
                 if (x < min) {
