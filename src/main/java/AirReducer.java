@@ -10,6 +10,6 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
     protected void reduce(AirWC key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> set = values.iterator();
 
-        
+        while()
     }
 }
