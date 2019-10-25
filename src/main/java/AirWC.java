@@ -4,7 +4,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirWC implements WritableComparable<AirWC> {
+public static class AirWC implements WritableComparable<AirWC> {
     private int id;
     private int ind;
 
