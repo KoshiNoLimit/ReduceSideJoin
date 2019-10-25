@@ -8,6 +8,11 @@ public class AirWC implements WritableComparable<AirWC> {
     private int id;
     private int ind;
 
+    AirWC(int id, int ind) {
+        this.id = id;
+        this.ind = ind;
+    }
+
     @Override
     public int compareTo(AirWC o) {
         if(id == o.id) return(ind < o.ind ? -1 : 1);
