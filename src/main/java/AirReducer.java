@@ -23,7 +23,7 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
                 }
                 med += x;
             }
-            context.write(new Text(name), Text(med/size + ))
+            context.write(new Text(name), new Text(" median=" + med/size + " min=" + min + " max=" + max ));
         }
 
     }
