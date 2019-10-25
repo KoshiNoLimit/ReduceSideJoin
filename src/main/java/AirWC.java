@@ -9,9 +9,9 @@ public class AirWC implements WritableComparable<AirWC> {
     private int ind;
 
     @Override
-    public int compareTo(Object o) {
-        if(id < o.id)
-        return 0;
+    public int compareTo(AirWC o) {
+        if(id == o.id) return(ind < o.ind ? -1 : 1);
+        else return (id < o.id ? -1 : 1);
     }
 
     @Override
