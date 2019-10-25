@@ -13,7 +13,7 @@ public class AirWC implements WritableComparable<AirWC> {
         this.ind = ind;
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 
