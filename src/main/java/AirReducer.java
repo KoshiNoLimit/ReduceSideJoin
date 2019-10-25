@@ -11,6 +11,7 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
         Iterator<Text> set = values.iterator();
         
 
+
         for()
     }
 }
