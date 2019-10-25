@@ -24,5 +24,5 @@ public class AirWC implements WritableComparable<AirWC> {
     public void readFields(DataInput dataInput) throws IOException {
         id = dataInput.readInt();
         ind = dataInput.readInt();
-    }
+    }  
 }
