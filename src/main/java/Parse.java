@@ -1,9 +1,6 @@
-public class Parse {
-    private static final Integer ID_F = 14;
+class Parse {
     private static final Integer DELAY = 18;
     private static final Integer CANCEL = 19;
-    private static final Integer ID_A = 0;
-    private static final Integer NAME = 1;
     private static final String WALL = ",";
     private static final String IS_CANCEL = "1.00";
     private static final String NOT_DELAY = "1.00";
