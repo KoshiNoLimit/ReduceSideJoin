@@ -12,7 +12,7 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
 
         String name = set.next().toString();
         if(set.hasNext()) {
-            int size = 0;
+            double size = 0.0;
             double min = 0.0, med = 0.0, max = 0.0;
             for (; set.hasNext(); size++) {
                 double x = Double.parseDouble(set.next().toString());
