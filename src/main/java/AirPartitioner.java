@@ -1,9 +1,11 @@
 import org.apache.hadoop.mapreduce.lib.partition.HashPartitioner;
 
-public class AirPartitioner extends HashPartitioner {
+import javax.xml.soap.Text;
+
+public class AirPartitioner extends HashPartitioner<AirWC, Text> {
 
     @Override
-    public int getPartition(Object key, Object value, int numReduceTasks) {
-        
+    public int getPartition(AirWC key, Text value, int numReduceTasks) {
+
     }
 }
