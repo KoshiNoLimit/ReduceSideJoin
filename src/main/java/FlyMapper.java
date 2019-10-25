@@ -14,7 +14,7 @@ public class FlyMapper extends Mapper <LongWritable, Text, AirWC, Text> {
         String[] set = value.toString().split(",");
 
         if( (set[CANCEL].equals(("1.00"))) || (set[DELAY].equals("0.00"))) {
-            return;
+            
         }
 
         for (int i = 0; i < set.length; i++) {
