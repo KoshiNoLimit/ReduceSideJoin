@@ -4,10 +4,10 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public static class AirWC implements WritableComparable<AirWC> {
+public class AirWC implements WritableComparable<AirWC> {
     private int id;
     private int ind;
-    
+
     AirWC(int id, int ind) {
         this.id = id;
         this.ind = ind;
