@@ -11,7 +11,12 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
         Iterator<Text> set = values.iterator();
 
         String name = set.next().toString();
-        int size;
-        for(;  set.hasNext();)
+        int size = 0;
+        double min =0.0, 
+        for(;  set.hasNext(); size++) {
+            String s = set.toString();
+
+
+        }
     }
 }
