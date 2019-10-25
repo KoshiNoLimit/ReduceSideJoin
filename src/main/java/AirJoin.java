@@ -18,6 +18,7 @@ public class AirJoin {
         job.setPartitionerClass(AirPartitioner.class);
         job.setGroupingComparatorClass(AirGC.class);
         job.setReducerClass(AirReducer.class);
+        job.setMapOutputKeyClass(AirWC.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
