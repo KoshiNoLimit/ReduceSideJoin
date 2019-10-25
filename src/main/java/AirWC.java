@@ -11,7 +11,6 @@ public class AirWC implements WritableComparable<AirWC> {
     AirWC(int id, int ind) {
         this.id = id;
         this.ind = ind;
-        System.out.println("Здарова");
     }
 
     int getId() {
