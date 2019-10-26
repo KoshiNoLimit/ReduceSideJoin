@@ -1,6 +1,5 @@
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.lib.partition.HashPartitioner;
-
-import javax.xml.soap.Text;
 
 public class AirPartitioner extends HashPartitioner<AirWC, Text> {
 

@@ -1,5 +1,5 @@
 class Parse {
-    private static final Integer DELAY = 17;
+    private static final Integer DELAY = 18;
     private static final Integer CANCEL = 19;
     private static final String WALL = ",";
     private static final String IS_CANCEL = "1.00";

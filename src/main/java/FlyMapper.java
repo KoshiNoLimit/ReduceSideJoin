@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class FlyMapper extends Mapper <LongWritable, Text, AirWC, Text> {
     private static final Integer ID = 14;
-    private static final Integer DELAY = 17;
+    private static final Integer DELAY = 18;
     private static final Integer IND = 1;
 
     @Override
