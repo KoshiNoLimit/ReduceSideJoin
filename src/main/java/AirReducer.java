@@ -15,17 +15,16 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
             double size = 0;
             double min = 0, med = 0, max = Double.MAX_VALUE;
             for (; set.hasNext(); size++) {
-                //String check = set.next().toString();
-                double x = Double.parseDouble(set.next().toString());
-                //if (!check.equals("")) {
-                  //  double x = Double.parseDouble(check);
-                    if (x < min) {
-                        min = x;
-                    } else if (x > max) {
-                        max = x;
-                    }
-                    med += x;
-                //}
+
+                String check = set.next().toString();
+                if(check.equals("")) continue;
+                double x = Double.parseDouble(check);
+                if (x < min) {
+                    min = x;
+                } else if (x > max) {
+                    max = x;
+                }
+                med += x;
                 context.write(new Text(name), new Text(" median=" + med / size + " min=" + min + " max=" + max));
             }
         }
