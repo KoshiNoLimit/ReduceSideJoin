@@ -5,7 +5,7 @@ class Parse {
     private static final String WALL_AIR = "\",\"";
     private static final String IS_CANCEL = "1.00";
     private static final String NOT_DELAY = "1.00";
-    public static final String[] EMPTY = {};
+    public static final String[] EMPTY = null;
     private static final String TRASH = "\"";
 
     static String[] parse(String s, Integer ind) {

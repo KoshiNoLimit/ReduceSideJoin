@@ -13,7 +13,7 @@ public class FlyMapper extends Mapper <LongWritable, Text, AirWC, Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if( key.get() != 0) {
             String[] set = Parse.parse(value.toString(), IND);
-            if (set.length != 0) {
+            if (set != null) {
                 context.write(new AirWC(Integer.parseInt(set[ID]), IND), new Text(set[DELAY]));
             }
         }
