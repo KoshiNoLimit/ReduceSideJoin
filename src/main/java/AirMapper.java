@@ -11,9 +11,11 @@ public class AirMapper extends Mapper <LongWritable, Text, AirWC, Text> {
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String[] set = Parse.parse(value.toString(), IND);
-        if(set.length != 0) {
-            context.write(new AirWC(Integer.parseInt(set[ID]), IND), new Text(set[NAME]));
+        if( key.get() != 0) {
+            String[] set = Parse.parse(value.toString(), IND);
+            if(set.length != 0) {
+                context.write(new AirWC(Integer.parseInt(set[ID]), IND), new Text(set[NAME]));
+            }
         }
     }
 }
