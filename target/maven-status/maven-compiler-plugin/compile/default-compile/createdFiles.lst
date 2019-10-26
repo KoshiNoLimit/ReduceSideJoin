@@ -1,7 +1,9 @@
+AirComparator.class
 AirJoin.class
 AirGC.class
 AirReducer.class
 AirMapper.class
 FlyMapper.class
 AirWC.class
+Parse.class
 AirPartitioner.class
