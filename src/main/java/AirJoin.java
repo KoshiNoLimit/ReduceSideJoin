@@ -35,8 +35,8 @@ public class AirJoin {
 }
 //hadoop fs -rm -r -f /user/knl/output
 //mvn package
-//hadoop fs -copyFromLocal AIRPORT.csv
-//hadoop fs -copyFromLocal ONTIME.csv
+//hadoop fs -copyFromLocal AIR.csv
+//hadoop fs -copyFromLocal TIME.csv
 //export HADOOP_CLASSPATH=target/hadoop-examples-1.0-SNAPSHOT.jar
-//hadoop AirJoin AIRPORT.csv ONTIME.csv output
+//hadoop AirJoin AIR.csv TIME.csv output
 //hadoop fs -copyToLocal output
