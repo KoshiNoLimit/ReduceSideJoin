@@ -8,11 +8,6 @@ public class AirWC implements WritableComparable<AirWC> {
     private Integer id;
     private Integer ind;
 
-    AirWC(){
-        this.id = 0;
-        this.ind = 0;
-    }
-
     AirWC(Integer id, Integer ind) {
         this.id = id;
         this.ind = ind;
@@ -22,12 +17,6 @@ public class AirWC implements WritableComparable<AirWC> {
         return this.id;
     }
 
-    Integer getInd() { return this.ind; }
-
-    void setId(Integer id) { this.id = id; }
-
-    void setInd(Integer ind) { this.ind = ind; }
-
     @Override
     public String toString() {
         return this.id.toString() + this.ind.toString();
@@ -35,12 +24,11 @@ public class AirWC implements WritableComparable<AirWC> {
 
     @Override
     public int compareTo(AirWC o) {
-        return this.toString().compareTo(o.toString());
-//        if(this.id.equals(o.id)){
-//            if(this.ind.equals(o.ind)) return 0;
-//            return(this.ind < o.ind ? -1 : 1);
-//        }
-//        return (this.id < o.id ? -1 : 1);
+        if(this.id.equals(o.id)){
+            if(this.ind.equals(o.ind)) return 0;
+            return(this.ind < o.ind ? -1 : 1);
+        }
+        return (this.id < o.id ? -1 : 1);
     }
 
     @Override
