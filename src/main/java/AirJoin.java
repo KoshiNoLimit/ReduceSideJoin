@@ -25,6 +25,7 @@ public class AirJoin {
         job.setGroupingComparatorClass(AirGC.class);
         job.setReducerClass(AirReducer.class);
         job.setMapOutputKeyClass(AirWC.class);
+
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
