@@ -33,3 +33,5 @@ public class AirJoin {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
+
+//hadoop AirJoin AIRPORT.csv ONTIME.csv output
