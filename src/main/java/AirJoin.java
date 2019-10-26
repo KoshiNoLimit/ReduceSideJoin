@@ -33,6 +33,7 @@ public class AirJoin {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
+//hadoop fs -rm -r -f /user/knl/output
 //mvn package
 //hadoop fs -copyFromLocal AIRPORT.csv
 //hadoop fs -copyFromLocal ONTIME.csv
