@@ -19,11 +19,12 @@ public class AirWC implements WritableComparable<AirWC> {
 
     @Override
     public int compareTo(AirWC o) {
-        if(this.id.equals(o.id)){
-            if(this.ind.equals(o.ind)) return 0;
-            return(this.ind < o.ind ? -1 : 1);
-        }
-        return (this.id < o.id ? -1 : 1);
+        return this.toString().compareTo(o.toString());
+//        if(this.id.equals(o.id)){
+//            if(this.ind.equals(o.ind)) return 0;
+//            return(this.ind < o.ind ? -1 : 1);
+//        }
+//        return (this.id < o.id ? -1 : 1);
     }
 
     @Override
