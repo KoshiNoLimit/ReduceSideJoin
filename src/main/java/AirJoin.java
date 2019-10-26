@@ -33,6 +33,6 @@ public class AirJoin {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
-
+//hadoop fs -copyFromLocal ONTIME.csv
 //export HADOOP_CLASSPATH=target/hadoop-examples-1.0-SNAPSHOT.jar
 //hadoop AirJoin AIRPORT.csv ONTIME.csv output
