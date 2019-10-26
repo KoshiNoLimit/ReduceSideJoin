@@ -33,7 +33,7 @@ public class AirJoin {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
-
+//mvn package
 //hadoop fs -copyFromLocal AIRPORT.csv
 //hadoop fs -copyFromLocal ONTIME.csv
 //export HADOOP_CLASSPATH=target/hadoop-examples-1.0-SNAPSHOT.jar
