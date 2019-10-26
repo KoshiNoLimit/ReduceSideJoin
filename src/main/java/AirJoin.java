@@ -34,4 +34,5 @@ public class AirJoin {
     }
 }
 
+//export HADOOP_CLASSPATH=target/hadoop-examples-1.0-SNAPSHOT.jar
 //hadoop AirJoin AIRPORT.csv ONTIME.csv output
