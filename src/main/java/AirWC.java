@@ -22,6 +22,17 @@ public class AirWC implements WritableComparable<AirWC> {
         return this.id;
     }
 
+    Integer getInd() { return this.ind; }
+
+    void setId(Integer id) { this.id = id; }
+
+    void setInd(Integer ind) { this.ind = ind; }
+
+    @Override
+    public String toString() {
+        return this.id.toString() + this.ind.toString();
+    }
+
     @Override
     public int compareTo(AirWC o) {
         return this.toString().compareTo(o.toString());
