@@ -39,4 +39,4 @@ public class AirJoin {
 //hadoop fs -copyFromLocal ONTIME.csv
 //export HADOOP_CLASSPATH=target/hadoop-examples-1.0-SNAPSHOT.jar
 //hadoop AirJoin AIRPORT.csv ONTIME.csv output
-//
+//hadoop fs -copyToLocal output
