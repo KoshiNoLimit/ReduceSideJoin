@@ -4,5 +4,5 @@ AirReducer.class
 AirMapper.class
 FlyMapper.class
 AirWC.class
-Parse.class
 AirPartitioner.class
+ParseAF.class
