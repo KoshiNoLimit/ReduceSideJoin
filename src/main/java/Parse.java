@@ -1,7 +1,9 @@
 class Parse {
+    public static final Integer AIRPORT_ID = 0;
+    public static final Integer FLY_ID = 14;
     private static final Integer DELAY = 18;
     private static final Integer CANCEL = 19;
-    private static final String WALL_FLY = ",";
+    private static final String DELIMER_FLY = ",";
     private static final String WALL_AIR = "\",\"";
     private static final String IS_CANCEL = "1.00";
     private static final String NOT_DELAY = "1.00";
