@@ -10,7 +10,17 @@ class Parse {
     private static final String IS_CANCEL = "1.00";
     private static final String NOT_DELAY = "1.00";
     public static final String[] EMPTY = {};
-    private static final String TRASH = "\"";
+    private static final String COMMA = "\"";
+
+    String[] raws;
+
+    static String[] parseAir(String s) {
+
+    }
+
+    static String[] parseFly(String s) {
+
+    }
 
     static String[] parse(String s, Integer ind) {
         String[] set;
@@ -23,7 +33,7 @@ class Parse {
             set = s.split(DELIMITER_AIR);
         }
         for(int i = 0; i < set.length; i++) {
-            set[i] = set[i].replaceAll(TRASH, "");
+            set[i] = set[i].replaceAll(COMMA, "");
         }
         return set;
     }
