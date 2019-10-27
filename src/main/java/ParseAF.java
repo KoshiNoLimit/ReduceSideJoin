@@ -5,7 +5,7 @@ class ParseAF {
     static final Integer FLY_IND = 1;
     static final Integer DELAY = 18;
     static final Integer AIRPORT_NAME = 1;
-    static final String[] EMPTY = {};
+    static final String[] EMPTY = new String[0];
     private static final Integer CANCEL = 19;
     private static final String DELIMITER_FLY = ",";
     private static final String DELIMITER_AIR = "\",\"";
