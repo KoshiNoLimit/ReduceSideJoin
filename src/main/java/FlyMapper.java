@@ -10,7 +10,7 @@ public class FlyMapper extends Mapper <LongWritable, Text, AirWC, Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if( key.get() != 0) {
             String[] lines = ParseAF.parseFly(value.toString());
-            if(lines.length != 0) {
+            if(!lines[ParseAF.DELAY].equals("")) {
                 context.write(new AirWC(Integer.parseInt(lines[ParseAF.FLY_ID]), ParseAF.FLY_IND), new Text(lines[ParseAF.DELAY]));
             }
         }
