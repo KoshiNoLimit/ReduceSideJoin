@@ -15,6 +15,7 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
             for (; textIterator.hasNext(); size++) {
                 String check = textIterator.next().toString();
                 //if(check.equals("")) continue;
+
                 double x = Double.parseDouble(check);
                 if (x < min) {
                     min = x;
