@@ -9,13 +9,10 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
     @Override
     protected void reduce(AirWC key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> textIterator = values.iterator();
-
         String name = textIterator.next().toString();
         if(textIterator.hasNext()) {
-            double size = 0;
-            double min = 0, med = 0, max = Double.MAX_VALUE;
+            double size = 0, min = 0, med = 0, max = Double.MAX_VALUE;
             for (; textIterator.hasNext(); size++) {
-
                 String check = textIterator.next().toString();
                 if(check.equals("")) continue;
                 double x = Double.parseDouble(check);
@@ -25,9 +22,8 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
                     max = x;
                 }
                 med += x;
-                context.write(new Text(name), new Text(" median=" + med / size + " min=" + min + " max=" + max));
             }
+            context.write(new Text(name), new Text(" median=" + med / size + " min=" + min + " max=" + max));
         }
-
     }
 }

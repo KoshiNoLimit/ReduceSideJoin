@@ -20,7 +20,6 @@ public class AirJoin {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlyMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
-
         job.setPartitionerClass(AirPartitioner.class);
         job.setGroupingComparatorClass(AirGC.class);
         job.setReducerClass(AirReducer.class);

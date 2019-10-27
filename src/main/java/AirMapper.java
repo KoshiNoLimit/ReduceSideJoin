@@ -10,9 +10,7 @@ public class AirMapper extends Mapper <LongWritable, Text, AirWC, Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if( key.get() != 0) {
             String[] lines = ParseAF.parseAir(value.toString());
-            if(lines.length != 0) {
-                context.write(new AirWC(Integer.parseInt(lines[ParseAF.AIRPORT_ID]), ParseAF.AIRPORT_IND), new Text(lines[ParseAF.AIRPORT_NAME]));
-            }
+            context.write(new AirWC(Integer.parseInt(lines[ParseAF.AIRPORT_ID]), ParseAF.AIRPORT_IND), new Text(lines[ParseAF.AIRPORT_NAME]));
         }
     }
 }
