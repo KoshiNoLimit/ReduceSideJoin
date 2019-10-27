@@ -8,15 +8,15 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
 
     @Override
     protected void reduce(AirWC key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-        Iterator<Text> set = values.iterator();
+        Iterator<Text> textIterator = values.iterator();
 
-        String name = set.next().toString();
-        if(set.hasNext()) {
+        String name = textIterator.next().toString();
+        if(textIterator.hasNext()) {
             double size = 0;
             double min = 0, med = 0, max = Double.MAX_VALUE;
-            for (; set.hasNext(); size++) {
+            for (; textIterator.hasNext(); size++) {
 
-                String check = set.next().toString();
+                String check = textIterator.next().toString();
                 if(check.equals("")) continue;
                 double x = Double.parseDouble(check);
                 if (x < min) {
