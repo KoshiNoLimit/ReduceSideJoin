@@ -1,4 +1,4 @@
-#bin/bash
+#!bin/bash
 
 hadoop fs -rm -r -f /user/knl/output
 mvn package
