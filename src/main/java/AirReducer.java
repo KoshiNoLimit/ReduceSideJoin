@@ -11,7 +11,7 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
         Iterator<Text> textIterator = values.iterator();
         String name = textIterator.next().toString();
         if(textIterator.hasNext()) {
-            double size = 0, min = 0, med = 0, max = Double.MAX_VALUE;
+            double size = 0, min = Double.MAX_VALUE, med = 0, max = 0;
             for (; textIterator.hasNext(); size++) {
                 String check = textIterator.next().toString();
                 if(check.equals("")) continue;
