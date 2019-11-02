@@ -14,7 +14,6 @@ public class AirReducer extends Reducer<AirWC, Text, Text, Text> {
             double size = 0, min = Double.MAX_VALUE, med = 0, max = 0;
             for (; textIterator.hasNext(); size++) {
                 String check = textIterator.next().toString();
-
                 double x = Double.parseDouble(check);
                 if (x < min) {
                     min = x;
